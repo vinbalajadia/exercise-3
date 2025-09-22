@@ -13,9 +13,12 @@ def showTasks( ):
      for i in range (len(tasks)):
       print(i+1,".",tasks[i])
 
-def removetask(tasknumber):
-    tasks.pop(tasknumber) 
-    print("task removed!!")
+def removeTask(task_number):
+    if 1 <= task_number <= len(tasks):
+        tasks.pop(task_number - 1)
+        print("Task removed!")
+    else:
+        print("Invalid task number.")
 
 def main():
     while True:
